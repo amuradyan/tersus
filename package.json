@@ -1,0 +1,42 @@
+{
+  "name": "tersus",
+  "displayName": "Tersus",
+  "description": "Shows only the current line number in VS Code gutter",
+  "version": "0.0.4",
+  "publisher": "spectrum",
+  "engines": {
+    "vscode": "^1.31.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.tersusEnable",
+        "title": "Tersus: Enable"
+      },
+      {
+        "command": "extension.tersusDisable",
+        "title": "Tersus: Disable"
+      }
+    ]
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/src/extension",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "@types/node": "^8.10.25",
+    "tslint": "^5.8.0",
+    "typescript": "^3.1.4",
+    "vscode": "^1.1.25",
+    "npm-watch": "^0.6.0"
+  }
+}
