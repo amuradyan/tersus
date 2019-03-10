@@ -38,5 +38,8 @@
     "typescript": "^3.1.4",
     "vscode": "^1.1.25",
     "npm-watch": "^0.6.0"
+  },
+  "dependencies": {
+    "text2png": "^2.1.0"
   }
 }

@@ -4,7 +4,7 @@ import * as path from "path";
 let d1: vscode.TextEditorDecorationType;
 let d2: vscode.TextEditorDecorationType;
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(_: vscode.ExtensionContext) {
   let isExtensionEnabled = true;
 
   vscode.commands.registerCommand("extension.tersusEnable", () => {
@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   vscode.window.onDidChangeTextEditorSelection(
-    (e: vscode.TextEditorSelectionChangeEvent) => {
+    (_: vscode.TextEditorSelectionChangeEvent) => {
       if (!isExtensionEnabled) return;
 
       setRelativeLineDecorations();
@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
           "..",
           "..",
           "images",
-          line + 1 + ".png"
+          (line + 1) + ".png"
         ),
         gutterIconSize: "cover"
       });
